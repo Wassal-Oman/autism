@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" />
+    <link href="/vendor/fonts/circular-std/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/libs/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="/vendor/fonts/fontawesome/css/fontawesome-all.css"
+    />
+    <link rel="stylesheet" href="/vendor/charts/chartist-bundle/chartist.css" />
+    <link rel="stylesheet" href="/vendor/charts/morris-bundle/morris.css" />
+    <link
+      rel="stylesheet"
+      href="/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css"
+    />
+    <link rel="stylesheet" href="/vendor/charts/c3charts/c3.css" />
+    <link
+      rel="stylesheet"
+      href="/vendor/fonts/flag-icon-css/flag-icon.min.css"
+    />
+    <title>Autism | Home</title>
+  </head>
+
+  <body>
+    <div class="dashboard-main-wrapper">
+      <!-- header -->
+      <div class="dashboard-header">
+        <nav class="navbar navbar-expand-lg bg-white fixed-top">
+          <a class="navbar-brand" href="/">Autism</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </nav>
+      </div>
+
+      <!-- sidebar -->
+      <div class="nav-left-sidebar sidebar-dark">
+        <div class="menu-list">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav flex-column">
+                <li class="nav-divider">
+                  Menu
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="/"
+                    ><i class="fa fa-fw fa-home"></i>Dashboard</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/users"
+                    ><i class="fa fa-fw fa-users"></i>Users</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/centers"
+                    ><i class="fa fa-fw fa-hospital"></i>Centers</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/logout"
+                    ><i class="fas fa-fw fa-sign-out-alt"></i>Log out</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <!-- content -->
+      <div class="dashboard-wrapper">
+        <div class="dashboard-ecommerce">
+          <div class="container-fluid dashboard-content ">
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="page-header">
+                  <h2 class="pageheader-title">Dashboard</h2>
+                  <div class="page-breadcrumb">
+                    <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                          <a href="#" class="breadcrumb-link">Dashboard</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                          Home
+                        </li>
+                      </ol>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ecommerce-widget">
+              <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="text-muted">Users</h5>
+                      <div class="metric-value d-inline-block">
+                        <h1 class="mb-1"><%= users %></h1>
+                      </div>
+                    </div>
+                    <div id="sparkline-revenue"></div>
+                  </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="text-muted">Centers</h5>
+                      <div class="metric-value d-inline-block">
+                        <h1 class="mb-1"><%= centers %></h1>
+                      </div>
+                    </div>
+                    <div id="sparkline-revenue2"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- footer -->
+        <div class="footer">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                Copyright © 2019 Autism. All rights reserved.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="/vendor/slimscroll/jquery.slimscroll.js"></script>
+    <script src="/libs/js/main-js.js"></script>
+    <script src="/libs/js/dashboard-ecommerce.js"></script>
+  </body>
+</html>

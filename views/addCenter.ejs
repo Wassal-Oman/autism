@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Autism | Add Center</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" />
+    <link href="/vendor/fonts/circular-std/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/libs/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="/vendor/fonts/fontawesome/css/fontawesome-all.css"
+    />
+  </head>
+
+  <body>
+    <div class="dashboard-main-wrapper">
+      <!-- header -->
+      <div class="dashboard-header">
+        <nav class="navbar navbar-expand-lg bg-white fixed-top">
+          <a class="navbar-brand" href="/">Autism</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </nav>
+      </div>
+
+      <!-- sidebar -->
+      <div class="nav-left-sidebar sidebar-dark">
+        <div class="menu-list">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav flex-column">
+                <li class="nav-divider">
+                  Menu
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/"
+                    ><i class="fa fa-fw fa-home"></i>Dashboard</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/users"
+                    ><i class="fa fa-fw fa-users"></i>Users</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="/centers"
+                    ><i class="fa fa-fw fa-hospital"></i>Centers</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/logout"
+                    ><i class="fas fa-fw fa-sign-out-alt"></i>Log out</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <!-- content -->
+      <div class="dashboard-wrapper">
+        <div class="container-fluid dashboard-content">
+          <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+              <div class="section-block" id="basicform">
+                <h3 class="section-title">Add New Center</h3>
+                <div class="page-breadcrumb">
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item">
+                        <a href="/home" class="breadcrumb-link">Dashboard</a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="/centers" class="breadcrumb-link">Centers</a>
+                      </li>
+                      <li class="breadcrumb-item active" aria-current="page">
+                        Add Center
+                      </li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+              <div class="card">
+                <h5 class="card-header">Center Details</h5>
+                <div class="card-body">
+                  <form
+                    action="/centers/store"
+                    method="POST"
+                    enctype="multipart/form-data"
+                  >
+                    <div class="form-group">
+                      <label for="name" class="col-form-label">Name:</label>
+                      <input
+                        name="name"
+                        type="text"
+                        class="form-control"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="location" class="col-form-label"
+                        >Location:</label
+                      >
+                      <input
+                        name="location"
+                        type="text"
+                        class="form-control"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="description">Description:</label>
+                      <textarea
+                        name="description"
+                        class="form-control"
+                        rows="3"
+                        required
+                      ></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="location" class="col-form-label"
+                        >Latitude:</label
+                      >
+                      <input
+                        name="latitude"
+                        type="text"
+                        class="form-control"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="location" class="col-form-label"
+                        >Longitude:</label
+                      >
+                      <input
+                        name="longitude"
+                        type="text"
+                        class="form-control"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="image" class="col-form-label">Image:</label>
+                      <input
+                        name="file"
+                        type="file"
+                        class="form-control"
+                        required
+                      />
+                    </div>
+                    <button class="btn btn-primary" type="submit">
+                      Add Center
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- footer -->
+        <div class="footer">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                Copyright © 2019 Autism. All rights reserved.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS Files -->
+    <script src="/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="/vendor/slimscroll/jquery.slimscroll.js"></script>
+    <script src="/libs/js/main-js.js"></script>
+  </body>
+</html>
