@@ -8,7 +8,7 @@ const dashboard = require("./routes/dashboard");
 
 // initialize app and set port
 const app = express();
-const port = process.env.PORT | 3000;
+const port = process.env.PORT || 3000;
 
 // middlewares
 app.use(express.json());
